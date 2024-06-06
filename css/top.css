@@ -600,7 +600,7 @@ body {
   #section02 .panel .h3_right {
     position: absolute;
     top: 2em;
-    z-index: 3;
+    z-index: 32;
   }
   #section02 .panel .h3_left h3,
   #section02 .panel .h3_right h3 {
