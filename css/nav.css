@@ -1,0 +1,328 @@
+.btn_hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 24px;
+    z-index: 12;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.btn_hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.btn_hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.btn_hamburger span:nth-child(2) {
+    top: 10px;
+}
+
+.btn_hamburger span:nth-child(3) {
+    top: 20px;
+}
+
+.btn_hamburger.open span:nth-child(1) {
+    background: #ffffff;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.btn_hamburger.open span:nth-child(2),
+.btn_hamburger.open span:nth-child(3) {
+    top: 6px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.btn_hamburger {
+    display: none;
+}
+
+@media screen and (min-width: 1201px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 55px;
+        z-index: 100;
+        /* overflow: hidden; */
+        background: #171b20;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        line-height: 55px;
+        text-align: center;
+    }
+
+    nav .nav_left {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    nav .nav_left>p:first-child {
+        width: 250px;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    nav .nav_left .menu_area {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav .nav_left .menu_area>.game_title {
+        display: none;
+    }
+
+    nav .nav_left .menu {
+        display: flex;
+    }
+
+    nav .nav_left .menu>li {
+        padding: 0 30px;
+        font-size: 0.8em;
+        position: relative;
+    }
+
+    nav .nav_left .menu>li>p {
+        position: relative;
+    }
+
+    nav .nav_left .menu>li>p::before {
+        background: red;
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        margin: auto;
+        transform-origin: center top;
+        transform: scale(0, 1);
+        transition: transform .3s;
+    }
+
+    nav .nav_left .menu>li:hover>p::before {
+        transform-origin: center top;
+        transform: scale(1, 1);
+    }
+
+    nav .nav_left .menu .account {
+        position: absolute;
+        right: 130px;
+    }
+
+    nav .nav_left .menu .account .menu_detail {
+        left: 15px;
+    }
+
+    nav .nav_left .menu_detail {
+        position: absolute;
+        display: inline-block;
+        width: fit-content;
+        padding: 1em 1.5em;
+        left: 0;
+        background-color: #171b20;
+        top: 55px;
+        text-align: left;
+        display: none;
+    }
+
+    nav .nav_left .menu_detail>li>a {
+        white-space: nowrap;
+        display: block;
+    }
+
+    nav .nav_left .menu_detail li:hover>a {
+        color: #e9ff20;
+    }
+
+    nav .nav_left .menu_detail>li {
+        line-height: 2.2em;
+    }
+
+    nav .nav_left .menu li:hover>.menu_detail {
+        display: block;
+    }
+
+
+
+    nav .nav_right {
+        width: 150px;
+    }
+
+    nav .nav_right a {
+        display: block;
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .btn_hamburger {
+        display: block;
+    }
+
+    .menu_area {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        padding-top: 50px;
+        transition: .3s;
+    }
+
+    .menu_area.open {
+        right: 0;
+    }
+
+
+
+    .menu {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .menu>li {
+        width: 100%;
+        padding: 15px;
+        border-bottom: #525252 1px solid;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 55px;
+        z-index: 100;
+        /* overflow: hidden; */
+        background: #171b20;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        line-height: 55px;
+        text-align: center;
+    }
+
+    nav .nav_left {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    nav .nav_left p:first-child {
+        width: 100%;
+        font-size: 1.8em;
+        font-weight: bold;
+        line-height: 55px;
+    }
+
+    .menu_detail {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn_hamburger {
+        display: block;
+    }
+
+    .menu_area {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #171b20;
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        padding-top: 50px;
+        transition: .3s;
+    }
+
+    .menu_area.open {
+        right: 0;
+    }
+
+    .menu_area>p>a {
+        display: block;
+        font-size: 2em;
+        padding-top: .1em;
+        padding-bottom: .2em;
+    }
+
+    .menu {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .menu>li {
+        width: 100%;
+        padding: 15px;
+        border-bottom: #525252 1px solid;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 55px;
+        z-index: 100;
+        /* overflow: hidden; */
+        background: #171b20;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        line-height: 55px;
+        text-align: center;
+    }
+
+    nav .nav_left {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    nav .nav_left p:first-child {
+        width: 100%;
+        font-size: 1.8em;
+        font-weight: bold;
+        line-height: 55px;
+    }
+
+    .menu_detail {
+        display: none;
+    }
+}

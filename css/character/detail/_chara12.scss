@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#top {
+  background-image: url(../../../image/character/pc/chara12.png);
+}
+
+#top img {
+  filter: invert(8%) sepia(50%) saturate(200%) hue-rotate(280deg) brightness(180%) contrast(180%);
+}
+
+#detail {
+  background-image: url(../../../image/character/chara12/chara_detail01.png);
+  background-size: 110%;
+  background-position-x: 80%;
+}
