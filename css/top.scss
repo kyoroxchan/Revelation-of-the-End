@@ -228,6 +228,10 @@ body {
             z-index: 15;
             bottom: 5vw;
 
+            .dl_btn_md {
+                display: none;
+            }
+
             .multiBtnToggle {
                 height: 80px;
                 width: 80px;

@@ -187,6 +187,9 @@ body {
     z-index: 15;
     bottom: 5vw;
   }
+  #section02 .multiBtn_area .dl_btn_md {
+    display: none;
+  }
   #section02 .multiBtn_area .multiBtnToggle {
     height: 80px;
     width: 80px;
