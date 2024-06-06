@@ -629,10 +629,11 @@ body {
   #section02 .panel .h3_right div .detail {
     position: relative;
     display: inline-block;
-    margin-top: 2em;
+    margin-top: 1.5em;
     font-size: 14px;
     color: red;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.093);
+    z-index: 32;
   }
   #section02 .panel .h3_left div .detail::after,
   #section02 .panel .h3_right div .detail::after {
