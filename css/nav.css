@@ -51,12 +51,19 @@
     transform: rotate(45deg);
 }
 
+body {
+    position: relative;
+}
 
 .btn_hamburger {
     display: none;
 }
 
 @media screen and (min-width: 1201px) {
+    .alert_area {
+        display: none;
+    }
+
     nav {
         position: fixed;
         width: 100%;
@@ -177,6 +184,19 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .alert_area {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #171b20;
+        z-index: 999;
+    }
+
+    .alert_area .stop {
+        display: block;
+    }
+
     .btn_hamburger {
         display: block;
     }
@@ -293,7 +313,23 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (orientation: landscape) and (max-width: 767px) {
+    .alert_area {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #171b20;
+        z-index: 999;
+    }
+}
+
+
+@media screen and (orientation: portrait) and (max-width: 767px) {
+    .alert_area {
+        display: none;
+    }
+
     .btn_hamburger {
         display: block;
     }
