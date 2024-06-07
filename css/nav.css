@@ -183,7 +183,26 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1200px) {
+    .alert_area {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #171b20;
+        z-index: 999;
+    }
+
+    .alert_area>p {
+        content: "";
+        color: #fff;
+        text-align: center;
+        height: 100vh;
+        line-height: 100vh;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1200px) {
     .alert_area {
         display: none;
         position: fixed;
@@ -324,6 +343,7 @@ body {
     }
 
     .alert_area>p {
+        content: "縦画面に戻してください";
         color: #fff;
         text-align: center;
         height: 100vh;
