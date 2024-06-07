@@ -224,6 +224,7 @@ body {
     padding-top: 3vw;
     background-size: 100%;
     background-position-y: 55px;
+    background-repeat: no-repeat;
   }
   #top h1 {
     position: absolute;
