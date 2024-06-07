@@ -291,7 +291,7 @@
 
     .menu>li {
         width: 100%;
-        padding: 15px;
+        padding: 15px 0 0 0;
         border-bottom: #525252 1px solid;
     }
 
@@ -324,5 +324,43 @@
 
     .menu_detail {
         display: none;
+        background: #3b3837;
+    }
+
+    .nav_title {
+        position: relative;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+
+    .nav_title::before,
+    .nav_title::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 2px;
+        background-color: #ffffff;
+        transition: all .5s ease;
+
+    }
+
+    .nav_title::before {
+        top: 48%;
+        right: 20px;
+        transform: rotate(45deg);
+    }
+
+    .nav_title::after {
+        top: 48%;
+        right: 10px;
+        transform: rotate(-45deg);
+    }
+
+    .nav_title.close::before {
+        transform: rotate(-45deg);
+    }
+
+    .nav_title.close::after {
+        transform: rotate(45deg);
     }
 }
