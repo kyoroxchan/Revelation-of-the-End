@@ -343,11 +343,14 @@ body {
     }
 
     .alert_area>p {
-        content: "縦画面に戻してください";
         color: #fff;
         text-align: center;
         height: 100vh;
         line-height: 100vh;
+    }
+
+    .alert_area>p::before {
+        content: "縦画面に戻してください";
     }
 }
 
