@@ -848,8 +848,10 @@ body {
     text-align: center;
   }
   #section02 .multiBtn_area .multiBtnToggle {
-    height: 60px;
-    width: 60px;
+    height: 15vw;
+    width: 15vw;
+    min-height: 40px;
+    min-width: 40px;
     margin: 3px;
     list-style: none;
     line-height: 80px;
