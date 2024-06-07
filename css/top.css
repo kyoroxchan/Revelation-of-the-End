@@ -664,7 +664,7 @@ body {
     height: 20%;
     background: linear-gradient(0deg, #171b20, 80%, rgba(255, 255, 255, 0));
     z-index: 10;
-    bottom: -10px;
+    bottom: -6px;
   }
   .main_contents {
     position: relative;
