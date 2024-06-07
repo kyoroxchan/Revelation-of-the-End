@@ -21,3 +21,15 @@ $('.nav_title').on('click', function () {//タイトル要素をクリックし�
         $(findElm).slideDown(500);//アコーディオンを開く
     }
 });
+window.onorientationchange = function () {
+    switch (window.orientation) {
+        case 0:
+            break;
+        case 90:
+            alert('画面を縦にしてください');
+            break;
+        case -90:
+            alert('画面を縦にしてください');
+            break;
+    }
+}
