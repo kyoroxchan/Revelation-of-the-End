@@ -200,6 +200,10 @@ body {
         height: 100vh;
         line-height: 100vh;
     }
+
+    .alert_area>p::before {
+        content: "横画面に戻してください";
+    }
 }
 
 @media screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1200px) {
