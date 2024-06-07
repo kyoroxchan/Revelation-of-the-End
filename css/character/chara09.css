@@ -393,15 +393,25 @@ body {
   }
 }
 
-#top {
-  background-image: url(../../../image/character/pc/chara09.png);
-}
-
 #top img {
   filter: invert(8%) sepia(70%) saturate(150%) hue-rotate(365deg) brightness(200%) contrast(220%);
 }
 
-#detail {
-  background-image: url(../../../image/character/chara09/chara_detail01.png);
-  background-size: 120%;
+@media screen and (min-width: 1201px) {
+  #top {
+    background-image: url(../../../image/character/pc/chara09.png);
+  }
+  #detail {
+    background-image: url(../../../image/character/chara09/chara_detail01.png);
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #top {
+    background-image: url(../../../image/character/md/chara09.png);
+  }
+  #detail {
+    background-image: url(../../../image/character/chara09/mb_chara_detail01.png);
+    background-size: cover;
+  }
 }/*# sourceMappingURL=chara09.css.map */

@@ -1,15 +1,33 @@
 @charset "UTF-8";
 
-#top {
-  background-image: url(../../../image/character/pc/chara07.png);
-}
-
 #top img {
   /* filter: invert(8%) sepia(50%) saturate(200%) hue-rotate(150deg) brightness(150%) contrast(180%); */
 }
 
-#detail {
-  background-image: url(../../../image/character/chara07/chara_detail01.png);
-  background-size: 120%;
-  background-position-y: 30%;
+@media screen and (min-width: 1201px) {
+
+  #top {
+    background-image: url(../../../image/character/pc/chara07.png);
+  }
+
+
+  #detail {
+    background-image: url(../../../image/character/chara07/chara_detail01.png);
+    background-size: 120%;
+    background-position-y: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {}
+
+@media screen and (max-width: 767px) {
+  #top {
+    background-image: url(../../../image/character/md/chara07.png);
+  }
+
+
+  #detail {
+    background-image: url(../../../image/character/chara07/mb_chara_detail01.png);
+    background-size: cover;
+  }
 }
