@@ -408,6 +408,20 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
     //ここにタブレット対応のCSS
+    .flex {
+        display: flex;
+    }
+
+    .black_bottom {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(0deg, $bg-color, 80%, rgba(255, 255, 255, 0));
+        z-index: 10;
+        bottom: -1px;
+    }
+
+
     .main_contents {
         position: relative;
         z-index: 10;
@@ -455,6 +469,314 @@ body {
             }
         }
     }
+
+    #section01 {
+        position: relative;
+        padding-bottom: 10vw;
+
+        .bg_img {
+            width: 100%;
+            height: 60vw;
+            position: absolute;
+            overflow: hidden;
+            background-image: url(../image/section1.png);
+            background-size: 130%;
+            background-position-x: 90%;
+
+            img {
+                width: 140%;
+                margin-left: -30%;
+            }
+
+            .black_bottom {
+                height: 50%;
+            }
+        }
+
+        .detail {
+            text-align: center;
+            padding-top: 12vw;
+
+            h2 {
+                font-size: 3em;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 2vw;
+                line-height: 1.5em;
+                letter-spacing: .1em;
+            }
+        }
+
+        .element01 {
+            text-align: center;
+            justify-content: center;
+            margin-top: 17vw;
+            height: 20vw;
+
+            .element01_left {
+                width: 40vw;
+
+                h2 {
+                    font-size: 2.5em;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-top: 5vw;
+                }
+
+                p {
+                    margin-top: 2vw;
+                    line-height: 1.5em;
+                    color: $text-detail;
+                }
+            }
+
+            .element01_right {
+                width: 40vw;
+                height: 20vw;
+                overflow: hidden;
+                border-radius: 5px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .element02 {
+            height: 25vw;
+            width: 70vw;
+            margin: 12vw auto 0 auto;
+
+            div {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                background: url(../image/element02.png);
+                background-size: 120%;
+                background-position-x: center;
+                background-position-y: 30%;
+                transition: all .6s ease;
+
+                h2 {
+                    font-size: 2.5em;
+                    color: #fff;
+                    font-weight: bold;
+                    position: absolute;
+                    bottom: 0;
+                    text-shadow: 0 0 10px $bg-color;
+                }
+
+            }
+
+            .isSmall {
+                background-size: 100%;
+            }
+
+            p {
+                margin-top: 2vw;
+                color: $text-detail;
+                line-height: 1.5em;
+            }
+
+
+        }
+    }
+
+    #section02 {
+        width: 100%;
+        height: 45vw;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+
+        .multiBtn_area {
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            justify-content: center;
+            width: 100vw;
+            z-index: 15;
+            bottom: 2vw;
+            flex-wrap: nowrap;
+
+            .dl_btn_md {
+                display: none;
+            }
+
+            .multiBtnToggle {
+                height: 60px;
+                width: 60px;
+                margin: .3%;
+                list-style: none;
+                line-height: 80px;
+                border: solid 3px #CCC;
+                background-color: gray;
+                text-align: center;
+                cursor: pointer;
+                box-sizing: border-box;
+                overflow: hidden;
+                border-radius: .3em;
+
+                img {
+                    height: 100%;
+                    vertical-align: top;
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    border: solid 3px #e9ff20;
+                }
+
+            }
+
+
+            .is-active {
+                border: solid 3px #e9ff20;
+                color: #FFF;
+                transition: all 0.2s ease-out;
+            }
+        }
+
+        .panel {
+            position: relative;
+            display: none;
+            animation-name: fadein;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+
+            .h3_left,
+            .h3_right {
+                position: absolute;
+                top: 10vw;
+                z-index: 3;
+
+                h3 {
+                    font-size: 3em;
+                    font-weight: bold;
+                    color: white;
+                    text-shadow: 0 0 2px $bg-color, 1px 1px 5px $bg-color, 0 0 8px white;
+                    line-height: 1em;
+                }
+
+                div {
+                    background-color: rgba($color: $bg-color, $alpha: .5);
+                    border-radius: .3em;
+                    padding: 1em;
+                    margin-top: .5em;
+
+                    p {
+                        color: white;
+                        text-shadow: 0 0 2px $bg-color, 1px 1px 5px $bg-color, 0 0 8px white;
+                        line-height: 1.5em;
+                    }
+
+                    .detail {
+                        position: relative;
+                        display: inline-block;
+                        margin-top: 30px;
+                        font-size: 14px;
+                        color: red;
+                        text-shadow: 0 0 1px rgba(255, 255, 255, 0.093);
+
+                        &::after {
+                            display: inline-block;
+                            overflow: hidden;
+                            content: "";
+                            -webkit-transform: translate3d(0, -3px, 0) skewX(55deg);
+                            transform: translate3d(0, -3px, 0) skewX(55deg);
+                            margin-left: 5px;
+                            width: 44px;
+                            height: 7px;
+                            border-right: 2px solid red;
+                            border-bottom: 1px solid red;
+                        }
+                    }
+                }
+
+
+                .dl_btn {
+                    display: block;
+                    width: 15vw;
+                    margin-top: 45px;
+                    padding: 1.2vw 2vw;
+                    background-color: red;
+                    color: white;
+                    border-radius: .3em;
+                    text-align: center;
+                }
+            }
+
+
+
+            .h3_left {
+                left: 55vw;
+                animation-name: detail_left;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+
+            }
+
+            .h3_right {
+                left: 10vw;
+                animation-name: detail_right;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+            }
+
+            .img_area {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .is-show {
+            display: block;
+        }
+    }
+
+    @keyframes fadein {
+        0% {
+            /* アニメーション開始時の指定 */
+            opacity: 0;
+        }
+
+        100% {
+            /* アニメーション終了時の指定 */
+            opacity: 1;
+        }
+    }
+
+    @keyframes detail_left {
+        0% {
+            /* アニメーション開始時の指定 */
+            left: 55vw;
+        }
+
+        100% {
+            /* アニメーション終了時の指定 */
+            left: 20vw;
+        }
+    }
+
+    @keyframes detail_right {
+        0% {
+            /* アニメーション開始時の指定 */
+            left: 20vw;
+        }
+
+        100% {
+            /* アニメーション終了時の指定 */
+            left: 55vw;
+        }
+    }
+
 }
 
 @media screen and (max-width: 767px) {
