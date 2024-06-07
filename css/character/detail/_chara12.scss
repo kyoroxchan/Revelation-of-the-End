@@ -18,7 +18,18 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  #top {
+    background-image: url(../../../image/character/pc/chara12.png);
+  }
+
+
+  #detail {
+    background-image: url(../../../image/character/chara12/chara_detail01.png);
+    background-size: 110%;
+    background-position-x: 80%;
+  }
+}
 
 @media screen and (max-width: 767px) {
   #top {

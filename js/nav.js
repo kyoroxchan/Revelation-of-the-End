@@ -26,10 +26,10 @@ window.onorientationchange = function () {
         case 0:
             break;
         case 90:
-            alert('画面を縦にしてください\n(デザインが崩れる場合があります)');
+            alert('画面を縦にしてください\n(タブレットは横で見てください)');
             break;
         case -90:
-            alert('画面を縦にしてください\n(デザインが崩れる場合があります)');
+            alert('画面を縦にしてください\n(タブレットは横で見てください)');
             break;
     }
 }
