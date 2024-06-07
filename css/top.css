@@ -550,13 +550,13 @@ body {
     left: 0;
     margin: 0 auto;
     z-index: 15;
-    bottom: -20vh;
+    bottom: -25vh;
   }
   #section02 .multiBtn_area .dl_btn_md {
     display: block;
     position: relative;
     width: 330px;
-    margin: 40vh auto 5vh auto;
+    margin: 0 auto 1em auto;
     z-index: 20;
     padding: 1.2em 2em;
     background-color: red;
