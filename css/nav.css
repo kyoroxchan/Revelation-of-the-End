@@ -322,6 +322,13 @@ body {
         background-color: #171b20;
         z-index: 999;
     }
+
+    .alert_area>p {
+        color: #fff;
+        text-align: center;
+        height: 100vh;
+        line-height: 100vh;
+    }
 }
 
 
